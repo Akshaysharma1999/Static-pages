@@ -8,10 +8,11 @@ class UserAction extends React.Component{
     {                
         return(
         <Container style={{ marginTop: '5em', padding: '5em' }}>
-              <Grid celled padded stackable >
+        <Segment raised>
+              <Grid divided padded stackable >
                 <Grid.Row>
                 <Grid.Column textAlign="center" width={4}>
-                  <Link to="/"><Image src='team.png' size="tiny" centered/></Link>
+                  <Link to="/table"><Image src='team.png' size="tiny" centered/></Link>
                 </Grid.Column>
                 <Grid.Column textAlign="center" width={4}>
                   <Link to="/"><Image src='graph.png' size="tiny" centered/></Link>
@@ -38,7 +39,8 @@ class UserAction extends React.Component{
                    <Link to="/"><Image src='cloud-computing.png' size="tiny" centered/></Link>
                 </Grid.Column>                      
                 </Grid.Row>                       
-            </Grid>          
+            </Grid>    
+        </Segment>      
         </Container>
         )
     }
