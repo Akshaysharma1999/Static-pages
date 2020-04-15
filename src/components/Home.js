@@ -28,18 +28,18 @@ const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Header
       as='h1'
-      content='Imagine-a-Company'
+      content='Nemesis Consultants'
       inverted
       style={{
         fontSize: mobile ? '2em' : '4em',
-        fontWeight: 'normal',
+        fontWeight: 'heavy',
         marginBottom: 0,
         marginTop: mobile ? '1.5em' : '3em',
       }}
     />
     <Header
       as='h2'
-      content='Do whatever you want when you want to.'
+      content='A team devoted to excellence'
       inverted
       style={{
         fontSize: mobile ? '1.5em' : '1.7em',
@@ -149,8 +149,7 @@ class MobileContainer extends Component {
           <Menu.Item as='a'>Work</Menu.Item>
           <Menu.Item as='a'>Company</Menu.Item>
           <Menu.Item as='a'>Careers</Menu.Item>
-          <Menu.Item as='a'>Log in</Menu.Item>
-          <Menu.Item as='a'>Sign Up</Menu.Item>
+          <Menu.Item as='a'>Log in</Menu.Item>         
         </Sidebar>
 
         <Sidebar.Pusher dimmed={sidebarOpened}>
@@ -168,10 +167,7 @@ class MobileContainer extends Component {
                 <Menu.Item position='right'>
                   <Button as='a' inverted>
                     Log in
-                  </Button>
-                  <Button as='a' inverted style={{ marginLeft: '0.5em' }}>
-                    Sign Up
-                  </Button>
+                  </Button>                 
                 </Menu.Item>
               </Menu>
             </Container>

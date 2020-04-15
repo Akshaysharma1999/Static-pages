@@ -27,7 +27,7 @@ class UserAction extends React.Component{
                 
                   <Grid.Row>
                 <Grid.Column textAlign="center" width={4}>
-                  <Link to="/"><Image src='team.png' size="tiny" centered/></Link>
+                  <Link to="/addlist"><Image src='team.png' size="tiny" centered/></Link>
                 </Grid.Column>
                 <Grid.Column textAlign="center" width={4}>
                   <Link to="/"><Image src='graph.png' size="tiny" centered/></Link>

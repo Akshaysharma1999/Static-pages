@@ -1,7 +1,43 @@
 import React from 'react'
 import {Segment,Container,Table,Icon,Image,Button,Dropdown} from 'semantic-ui-react'
 
+let arr=[{name:'John Lilki',Date:'September 14, 2013',email:'jhlilk22@yahoo.com'},
+        {name:'Jamie Harington',Date:'January 11, 2014',email:'jamieharingonton@yahoo.com'},
+        {name:'Jill Lewis',Date:'May 11, 2014',email:'jhlilk22@yahoo.com'},
+        {name:'John Lilki',Date:'September 14, 2013',email:'jilsewris22@yahoo.com'},
+        {name:'Jamie Harington',Date:'January 11, 2014',email:'jhlilk22@yahoo.com'},
+        {name:'John Lilki',Date:'September 14, 2013',email:'jhlilk22@yahoo.com'},
+        {name:'Jamie Harington',Date:'January 11, 2014',email:'jamieharingonton@yahoo.com'},
+        {name:'Jill Lewis',Date:'May 11, 2014',email:'jhlilk22@yahoo.com'},
+        {name:'John Lilki',Date:'September 14, 2013',email:'jilsewris22@yahoo.com'},
+        {name:'Jamie Harington',Date:'January 11, 2014',email:'jhlilk22@yahoo.com'},]
+
 class TableComp extends React.Component{
+
+    renderRow=()=>{
+        return (
+            arr.map((obj)=>{
+                return(
+                    <Table.Row>
+                        <Table.Cell>{obj.name}</Table.Cell>
+                        <Table.Cell>{obj.Date}</Table.Cell>
+                        <Table.Cell>{obj.email}</Table.Cell>
+                        <Table.Cell>
+                          <Dropdown
+                                text='Click'
+                                icon='dropdown'                                                      
+                                button     
+                                options={[{ key: 1, text: 'One', value: 1 },
+                                          { key: 2, text: 'Two', value: 2 },
+                                          { key: 3, text: 'Three', value: 3 },]}                           
+                            />
+                        </Table.Cell>
+                   </Table.Row>
+                )
+            })              
+        )
+    }
+
     render()
     {
         return(
@@ -18,77 +54,8 @@ class TableComp extends React.Component{
                     </Table.Header>
 
                     <Table.Body>
-                    <Table.Row>
-                        <Table.Cell>John Lilki</Table.Cell>
-                        <Table.Cell>September 14, 2013</Table.Cell>
-                        <Table.Cell>jhlilk22@yahoo.com</Table.Cell>
-                        <Table.Cell>
-                          <Dropdown
-                                text='Click'
-                                icon='dropdown'                                                      
-                                button     
-                                options={[{ key: 1, text: 'One', value: 1 },
-                                          { key: 2, text: 'Two', value: 2 },
-                                          { key: 3, text: 'Three', value: 3 },]}                           
-                            />
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell>Jamie Harington</Table.Cell>
-                        <Table.Cell>January 11, 2014</Table.Cell>
-                        <Table.Cell>jamieharingonton@yahoo.com</Table.Cell>
-                        <Table.Cell>
-                        <Dropdown text='Click' icon='dropdown' button options={[{ key: 1, text: 'One', value: 1 },{ key: 2, text: 'Two', value: 2 },{ key: 3, text: 'Three', value: 3 },]}/>
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell>Jill Lewis</Table.Cell>
-                        <Table.Cell>May 11, 2014</Table.Cell>
-                        <Table.Cell>jilsewris22@yahoo.com</Table.Cell>
-                        <Table.Cell>  
-                        <Dropdown text='Click' icon='dropdown' button options={[{ key: 1, text: 'One', value: 1 },{ key: 2, text: 'Two', value: 2 },{ key: 3, text: 'Three', value: 3 },]}/>
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell>John Lilki</Table.Cell>
-                        <Table.Cell>September 14, 2013</Table.Cell>
-                        <Table.Cell>jhlilk22@yahoo.com</Table.Cell>
-                        <Table.Cell>
-                        <Dropdown text='Click' icon='dropdown' button options={[{ key: 1, text: 'One', value: 1 },{ key: 2, text: 'Two', value: 2 },{ key: 3, text: 'Three', value: 3 },]}/>
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell>John Lilki</Table.Cell>
-                        <Table.Cell>September 14, 2013</Table.Cell>
-                        <Table.Cell>jhlilk22@yahoo.com</Table.Cell>
-                        <Table.Cell>
-                        <Dropdown text='Click' icon='dropdown' button options={[{ key: 1, text: 'One', value: 1 },{ key: 2, text: 'Two', value: 2 },{ key: 3, text: 'Three', value: 3 },]}/>
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell>Jamie Harington</Table.Cell>
-                        <Table.Cell>January 11, 2014</Table.Cell>
-                        <Table.Cell>jamieharingonton@yahoo.com</Table.Cell>
-                        <Table.Cell>
-                        <Dropdown text='Click' icon='dropdown' button options={[{ key: 1, text: 'One', value: 1 },{ key: 2, text: 'Two', value: 2 },{ key: 3, text: 'Three', value: 3 },]}/>
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell>Jill Lewis</Table.Cell>
-                        <Table.Cell>May 11, 2014</Table.Cell>
-                        <Table.Cell>jilsewris22@yahoo.com</Table.Cell>
-                        <Table.Cell>
-                        <Dropdown text='Click' icon='dropdown' button options={[{ key: 1, text: 'One', value: 1 },{ key: 2, text: 'Two', value: 2 },{ key: 3, text: 'Three', value: 3 },]}/>
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell>John Lilki</Table.Cell>
-                        <Table.Cell>September 14, 2013</Table.Cell>
-                        <Table.Cell>jhlilk22@yahoo.com</Table.Cell>
-                        <Table.Cell>
-                        <Dropdown text='Click' icon='dropdown' button options={[{ key: 1, text: 'One', value: 1 },{ key: 2, text: 'Two', value: 2 },{ key: 3, text: 'Three', value: 3 },]}/>
-                        </Table.Cell>
-                    </Table.Row>
+                    {this.renderRow()}                  
+                   
                     </Table.Body>
                 </Table>
                 </Segment>
